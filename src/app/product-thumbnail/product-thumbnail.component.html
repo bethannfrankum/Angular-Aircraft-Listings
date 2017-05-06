@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <img src="{{product.imageUrl}}" />
+        <h3>{{product.name}}
+        </h3>
+        <p>
+            {{product.shortDescription}}
+        </p>
+
+        <a  [routerLink]="['details', product.id]" class="btn">View</a>
+    </div>
+</div>
