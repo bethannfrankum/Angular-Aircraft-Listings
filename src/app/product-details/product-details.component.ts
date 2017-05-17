@@ -22,5 +22,10 @@ export class ProductDetailsComponent implements OnInit {
       }
     });
   }
+showLogs:boolean = false;
+
+loadLogs(){
+    this.showLogs = true;
+}
 
 }

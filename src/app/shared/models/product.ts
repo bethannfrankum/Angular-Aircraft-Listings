@@ -1,3 +1,4 @@
+import{Log} from './log';
 export interface Product {
     id: string;
     name: string;
@@ -5,4 +6,10 @@ export interface Product {
     description: string;
     imageUrl: string;
     price: string;
+    location: string;
+    phone: string;
+    model: string;
+    condition: string;
+    serial: string;
+    logs: Log[];
 }

@@ -11,13 +11,15 @@ import {ProductService} from './shared/services/product.service';
 
 import {AppRoutingModule} from './app-routing.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { LogsComponent } from './logs/logs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductThumbnailComponent,
     DashboardComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    LogsComponent
   ],
   imports: [
     BrowserModule,

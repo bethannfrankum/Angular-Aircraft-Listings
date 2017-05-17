@@ -1,20 +1,26 @@
 <!--<pre><code>
  {{product | json}} 
   </code></pre>-->
-
 <div class="panel panel-default">
-    <div class="panel-body">
-        <img src="{{product.imageUrl}}" />
+    <div class="panel-body"> <img src="{{product.imageUrl}}" />
         <h1>{{product.name}}
         </h1>
-        <p>
-            {{product.description}}
-        </p>
-        <p> {{product.price}}
-        </p>
-
+        <p> {{product.description}} </p>
+        <p class="heading">Location</p>
+        <p class="location"> {{product.location}} </p>
+        <p class="phone">{{product.phone}}</p>
+        <p class="heading">Price</p>
+        <p class="price"> {{product.price}} </p>
+        <div class="specs">
+            <h2 class="specstitle">Specifications</h2>
+            <p class="heading">Model</p>
+            <p class="info">{{product.model}}</p>
+            <p class="heading">Condition</p>
+            <p class="info">{{product.condition}}</p>
+            <p class="heading">Serial Number</p>
+            <p class="info">{{product.serial}}</p>
+        </div>
+        <button *ngIf="!showLogs" (click)="loadLogs()" class="logsbutton">View Logs and More Details</button>
+        <app-logs *ngIf="showLogs" [logs]="product.logs"></app-logs>
     </div>
-</div>
-
-
-  <a routerLink="/">Back</a>
+</div> <a routerLink="/">Back</a>
